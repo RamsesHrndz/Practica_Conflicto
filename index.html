@@ -1,13 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Zona Gamer</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: white;
+            text-align: center;
+        }
+
+        header {
+            padding: 20px;
+            background: rgba(0,0,0,0.6);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 3rem;
+            letter-spacing: 2px;
+        }
+
+        .games {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 40px;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 15px;
+            transition: 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            background: rgba(255,255,255,0.2);
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            background: #00c6ff;
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #00f2fe;
+        }
+
+        footer {
+            padding: 20px;
+            background: rgba(0,0,0,0.6);
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
 <body>
-    <h1>
-        Cristopher Cruz Perez
-    </h1>
+
+<header>
+    <h1>🎮 ZONA GAMER</h1>
+    <p>Tu portal épico de videojuegos</p>
+</header>
+
+<section class="games">
+    <div class="card">
+        <h2>🔥 Acción</h2>
+        <p>Los mejores shooters y batallas intensas.</p>
+        <button>Explorar</button>
+    </div>
+
+    <div class="card">
+        <h2>⚽ Deportes</h2>
+        <p>Fútbol, carreras y más adrenalina.</p>
+        <button>Explorar</button>
+    </div>
+
+    <div class="card">
+        <h2>🧙 RPG</h2>
+        <p>Explora mundos mágicos y sube de nivel.</p>
+        <button>Explorar</button>
+    </div>
+</section>
+
+<footer>
+    © 2026 Zona Gamer - Hecho con flow por Cris 😎
+</footer>
+
 </body>
 </html>
