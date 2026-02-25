@@ -34,6 +34,26 @@ nav a:hover {
     color: #00ffcc;
 }
 
+.ofertas {
+    margin-top: 30px;
+    width: 95%;
+    padding: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-self: center;
+    color: #ffffff;
+}
+
+.ofertas img {
+    width: 40%;
+    border-radius: 10px;
+}
+
+.ofertas div {
+    width: 40%;
+}
+
 /* CATÁLOGO */
 .catalogo {
     padding: 40px;
@@ -43,7 +63,7 @@ nav a:hover {
 }
 
 /* CARD */
-.card {
+.card, .ofertas {
     background-color: #1e1e1e;
     padding: 15px;
     border-radius: 12px;
@@ -66,6 +86,12 @@ nav a:hover {
 }
 
 .precio {
+    color: #00ffcc;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.ofertas span {
     color: #00ffcc;
     font-weight: bold;
     margin-bottom: 10px;
