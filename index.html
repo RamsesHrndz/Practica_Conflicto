@@ -5,6 +5,31 @@
     <title>GameStore</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<script>
+
+function filtrar(valor){
+
+    let juegos = document.querySelectorAll(".ofertas .card");
+
+    juegos.forEach(juego => {
+
+        let descuento = juego.getAttribute("data-descuento");
+
+        if(valor === "todos"){
+            juego.style.display = "block";
+        }
+        else if(descuento >= valor){
+            juego.style.display = "block";
+        }
+        else{
+            juego.style.display = "none";
+        }
+
+    });
+
+}
+
+</script>
 <body>
 
     <header>
@@ -17,15 +42,46 @@
         </nav>
     </header>
         
-    <button class="ofertas">
-        <img src="img/oferta_00.png" alt="Oferta 1">
-        <div>
-            <h2>Ofertas</h2>
-            <p>Descubre las mejores ofertas de la semana</p>
-            <span>Ver ofertas</span>
+    <div class="filtros">
+        <button onclick="filtrar('todos')">Todos</button>
+        <button onclick="filtrar('30')">30%+</button>
+        <button onclick="filtrar('50')">50%+</button>
+    </div>
+    <section class="ofertas">
+        <div class="card" data-descuento="50">
+            <span class="descuento">-50%</span>
+            <img src="https://imgproxy.eneba.games/Dl95a0F6L6zD3nfBa7ZreMynDi-bLMglQfSwZ-INupQ/rs:fit:600/ar:1/czM6Ly9wcm9kdWN0/cy5lbmViYS5nYW1l/cy9wcm9kdWN0cy9f/U1FlcDd2a1dqMGFj/d2hIYS1hLWtCcTlW/eVQtVDJ5aXdjS3Mt/cWhGY25FLmpwZw" alt="Juego 1">
+            <h3>Sonic Frontiers</h3>
+            <p class="precio-antes">$1,499 MXN</p>
+            <p class="precio-ahora">$999 MXN</p>
+            <button>Comprar</button>
         </div>
-    </button>
+        <div class="card" data-descuento="45">
+            <span class="descuento">-45%</span>
+            <img src="https://imgproxy.eneba.games/HvdHYO5AZ2FHVclD-r0ZVT98QpjOkXRcKZiDUxzVaBk/rs:fit:600/ar:1/czM6Ly9wcm9kdWN0/cy5lbmViYS5nYW1l/cy9wcm9kdWN0cy9j/WDhDLVFwRXA1dDJJ/dU9FakRwRVM0eXdE/MGFPNkp6V0VqVXUz/cmdfUjFVLmpwZWc" alt="Juego 1">
+            <h3>Mario kart 8 deluxe</h3>
+            <p class="precio-antes">$1,099 MXN</p>
+            <p class="precio-ahora">$599 MXN</p>
+            <button>Comprar</button>
+        </div>
+        <div class="card" data-descuento="30">
+            <span class="descuento">-30%</span>
+            <img src="https://imgproxy.eneba.games/ka_MdQZduX6KHqvov-RRI7RTEMFnuDvM0tIZdZOX-KY/rs:fit:600/ar:1/czM6Ly9wcm9kdWN0/cy5lbmViYS5nYW1l/cy9wcm9kdWN0cy9t/S2xCenNtRmZweTRT/aW9oWVp1MHd4ZzdT/NWpWWmItX0lGN0Q5/Z0VzVmhFLmpwZWc" alt="Juego 1">
+            <h3>Grand Theft Auto V: Premium Online Edition</h3>
+            <p class="precio-antes">$300 MXN</p>
+            <p class="precio-ahora">$210 MXN</p>
+            <button>Comprar</button>
+        </div>
+        <div class="card" data-descuento="52">
+            <span class="descuento">-52%</span>
+            <img src="https://imgproxy.eneba.games/MJxGZjDAmtGkgQ5QKX-mUXC8kkAVZAp9Nk9_0Io7TDc/rs:fit:600/ar:1/czM6Ly9wcm9kdWN0/cy5lbmViYS5nYW1l/cy9wcm9kdWN0cy9u/ZXUyQ0hyRjI4a2tk/NnRIMDU1ZndNbk12/TElPc0loX1ZsTnJ4/SzRlTXdNLmpwZw" alt="Juego 1">
+            <h3>SILENT HILL 2</h3>
+            <p class="precio-antes">$1,185 MXN</p>
+            <p class="precio-ahora">$579 MXN</p>
+            <button>Comprar</button>
+        </div>
 
+    </section>
     <section class="catalogo">
 
         <div class="card">
@@ -34,6 +90,7 @@
             <p class="precio">$999 MXN</p>
             <button>Comprar</button>
         </div>
+        
 
         <div class="card">
             <img src="https://imgproxy.eneba.games/jJzx9BMNhN88CD0SonAZSHwPgvu56wVUfGs2IMbGxYI/rs:fit:300/ar:1/czM6Ly9wcm9kdWN0/cy5lbmViYS5nYW1l/cy9wcm9kdWN0cy9C/eWg1TVBub0pJbkdp/cmdHX3pISzlwU2ZJ/RnJsMFJURHhRYnNp/WExCTExZLmpwZw" alt="Juego 2">
