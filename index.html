@@ -17,14 +17,72 @@
         </nav>
     </header>
         
-    <button class="ofertas">
-        <img src="img/oferta_00.png" alt="Oferta 1">
-        <div>
-            <h2>Ofertas</h2>
-            <p>Descubre las mejores ofertas de la semana</p>
-            <span>Ver ofertas</span>
+    <section class="ofertas">
+        <div class="ofertas-texto">
+            <h2>Ofertas destacadas</h2>
+            <p>Descubre las mejores ofertas de la semana en tus juegos favoritos.</p>
+            <span>Desliza para ver más</span>
         </div>
-    </button>
+
+        <div class="ofertas-carousel">
+            <button class="ofertas-btn prev" aria-label="Oferta anterior">&#10094;</button>
+
+            <div class="ofertas-ventana">
+                <article class="oferta-item active">
+                    <img src="https://media.rawg.io/media/resize/640/-/games/019/0192f08452e0d8ead71940e90a3cdf70.jpg" alt="Oferta especial 1">
+                    <h3>Pragmata</h3>
+                    <p class="precio">
+                        <span class="precio-antes">$999 MXN</span>
+                        <span class="precio-ahora">$799 MXN</span>
+                        <span class="precio-descuento">20% dto.</span>
+                    </p>
+                </article>
+
+                <article class="oferta-item">
+                    <img src="https://media.rawg.io/media/resize/640/-/games/ed6/ed613937e113a4d43fa0db771e527a2f.jpg" alt="Oferta especial 2">
+                    <h3>Resident Evil Requiem</h3>
+                    <p class="precio">
+                        <span class="precio-antes">$799 MXN</span>
+                        <span class="precio-ahora">$719 MXN</span>
+                        <span class="precio-descuento">10% dto.</span>
+                    </p>
+                </article>
+
+                <article class="oferta-item">
+                    <img src="https://media.rawg.io/media/resize/640/-/games/299/299e031b1a8082298a4aeb5355d45571.jpg" alt="Oferta especial 3">
+                    <h3>Reanimal</h3>
+                    <p class="precio">
+                        <span class="precio-antes">$899 MXN</span>
+                        <span class="precio-ahora">$449 MXN</span>
+                        <span class="precio-descuento">50% dto.</span>
+                    </p>
+                </article>
+
+                <article class="oferta-item">
+                    <img src="https://media.rawg.io/media/resize/640/-/games/910/9101d577869a5c24675b80f58d4be72c.jpg" alt="Oferta especial 4">
+                    <h3>Yakuza Kiwami 3</h3>
+                    <p class="precio">
+                        <span class="precio-antes">$899 MXN</span>
+                        <span class="precio-ahora">$719 MXN</span>
+                        <span class="precio-descuento">20% dto.</span>
+                    </p>
+                </article>
+
+                <article class="oferta-item">
+                    <img src="https://media.rawg.io/media/resize/640/-/games/6fa/6fabd7b46841c00c481318ded9c39ccb.jpg" alt="Oferta especial 4">
+                    <h3>Horripilant</h3>
+                    <p class="precio">
+                        <span class="precio-antes">$899 MXN</span>
+                        <span class="precio-ahora">$719 MXN</span>
+                        <span class="precio-descuento">20% dto.</span>
+                    </p>
+                </article>
+                </article>
+            </div>
+
+            <button class="ofertas-btn next" aria-label="Oferta siguiente">&#10095;</button>
+        </div>
+    </section>
 
     <section class="catalogo">
 
@@ -61,6 +119,34 @@
     <footer>
         <p>© 2026 GameStore - Todos los derechos reservados</p>
     </footer>
+
+    <script>
+        const items = document.querySelectorAll('.oferta-item');
+        const prevBtn = document.querySelector('.ofertas-btn.prev');
+        const nextBtn = document.querySelector('.ofertas-btn.next');
+
+        let currentIndex = 0;
+
+        function mostrarOferta(index) {
+            items.forEach((item, i) => {
+                if (i === index) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+        }
+
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + items.length) % items.length;
+            mostrarOferta(currentIndex);
+        });
+
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % items.length;
+            mostrarOferta(currentIndex);
+        });
+    </script>
 
 </body>
 </html>
