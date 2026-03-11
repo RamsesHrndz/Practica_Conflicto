@@ -127,7 +127,9 @@ nav a:hover {
 }
 
 .card img {
-    width: 100%;
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
     border-radius: 10px;
 }
 
@@ -176,6 +178,44 @@ button:hover {
     background-color: #00ccaa;
 }
 
+.card {
+    position: relative;
+}
+
+/* etiqueta de descuento */
+.descuento{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: red;
+    color: white;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* precio antes */
+.precio-antes{
+    text-decoration: line-through;
+    color: gray;
+    font-size: 14px;
+}
+
+/* precio actual */
+.precio-ahora{
+    color: #00ffcc;
+    font-weight: bold;
+    font-size: 18px;
+}
+.filtros{
+    text-align: center;
+    margin-top: 30px;
+}
+
+.filtros button{
+    margin: 10px;
+}
 /* FOOTER */
 footer {
     text-align: center;
