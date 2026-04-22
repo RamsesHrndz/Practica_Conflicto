@@ -5,6 +5,11 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+:root {
+    --acentuar: #a4ff3b;
+    --acentuar-hover: #8bc434;
+}
+
 body {
     background-color: #121212;
     color: white;
@@ -20,7 +25,7 @@ header {
 }
 
 header h1 {
-    color: #00ffcc;
+    color: var(--acentuar);
 }
 
 nav a {
@@ -31,7 +36,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #00ffcc;
+    color: var(--acentuar);
 }
 
 .ofertas {
@@ -87,8 +92,8 @@ nav a:hover {
 
 .ofertas-btn {
     background-color: transparent;
-    color: #00ffcc;
-    border: 2px solid #00ffcc;
+    color: var(--acentuar);
+    border: 2px solid var(--acentuar);
     border-radius: 50%;
     width: 40px;
     height: 40px;
@@ -100,7 +105,7 @@ nav a:hover {
 }
 
 .ofertas-btn:hover {
-    background-color: #00ffcc;
+    background-color: var(--acentuar);
     color: #121212;
 }
 
@@ -138,7 +143,7 @@ nav a:hover {
 }
 
 .precio {
-    color: #00ffcc;
+    color: var(--acentuar);
     font-weight: bold;
     margin-bottom: 10px;
 }
@@ -150,7 +155,7 @@ nav a:hover {
 }
 
 .precio-ahora {
-    color: #00ffcc;
+    color: var(--acentuar);
     margin-right: 8px;
 }
 
@@ -159,13 +164,13 @@ nav a:hover {
 }
 
 .ofertas span {
-    color: #00ffcc;
+    color: var(--acentuar);
     font-weight: bold;
     margin-bottom: 10px;
 }
 
 button {
-    background-color: #00ffcc;
+    background-color: var(--acentuar);
     border: none;
     padding: 10px 20px;
     border-radius: 8px;
@@ -175,7 +180,7 @@ button {
 }
 
 button:hover {
-    background-color: #00ccaa;
+    background-color: var(--acentuar-hover);
 }
 
 .card {
@@ -204,7 +209,7 @@ button:hover {
 
 /* precio actual */
 .precio-ahora{
-    color: #00ffcc;
+    color: var(--acentuar);
     font-weight: bold;
     font-size: 18px;
 }
